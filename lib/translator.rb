@@ -18,8 +18,8 @@ def get_japanese_emoticon(file_path, emoticon)
   library = load_library(file_path)
   response = nil
   library.keys.each do |name|
-    if emoticon == emoticons[name][:english]
-      response = emoticons[name][:japanese]
+    if emoticon == library[name][:english]
+      response = library[name][:japanese]
     end
   end
   if response == nil
