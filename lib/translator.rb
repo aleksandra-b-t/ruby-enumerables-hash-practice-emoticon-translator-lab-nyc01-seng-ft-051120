@@ -4,13 +4,14 @@ def load_library(file_path)
   library = YAML.load_file(file_path)
   emoticons = {}
    library.each do |name, emos|
-     binding.pry 
+     
      english_emo = emos[0]
      japan_emo = emos[1]
      emoticons[name] = [:english] => english_emo
      emoticons[name] = [:japanese] => japan_emo
   end
   emoticons
+  binding.pry 
 end
 
 def get_japanese_emoticon(file_path, emoticon)
