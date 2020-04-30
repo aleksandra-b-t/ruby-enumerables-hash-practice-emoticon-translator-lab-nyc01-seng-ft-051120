@@ -7,6 +7,7 @@ def load_library(file_path)
      #binding.pry 
      english_emo = emos[0]
      japan_emo = emos[1]
+     emoticons[name] = {}
      emoticons[name][:english]= english_emo
      emoticons[name][:japanese]= japan_emo
   end
