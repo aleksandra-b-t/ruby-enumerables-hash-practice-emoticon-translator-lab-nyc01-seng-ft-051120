@@ -34,7 +34,7 @@ def get_english_meaning(file_path, emoticon)
   response = nil
   library.keys.each do |emo|
     if emoticon == library[emo][:japanese]
-      response = library[emo]
+      response = emo
     end
   end
   if response == nil
