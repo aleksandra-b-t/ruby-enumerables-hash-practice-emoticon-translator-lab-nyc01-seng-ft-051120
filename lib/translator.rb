@@ -41,3 +41,4 @@ def get_english_meaning(file_path, emoticon)
     return response
   end
 end
+end
