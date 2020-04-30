@@ -11,15 +11,14 @@ def load_library(file_path)
      emoticons[name] = [:japanese] => japan_emo
   end
   emoticons
-  
 end
 
 def get_japanese_emoticon(file_path, emoticon)
   library = load_library(file_path)
   response = nil
   emoticons[name].each do |english, japanese|
-    if emoticon == english
-      response = japanese
+    if emoticon == emoticons[name][:english]
+      response = emoticons[name][:japanese]
     end
   end
   if response == nil
@@ -29,12 +28,12 @@ def get_japanese_emoticon(file_path, emoticon)
   end
 end
 
-def get_english_meaning(yaml_file, emoticon)
-  library = load_library(yaml_file)
+def get_english_meaning(file_path, emoticon)
+  library = load_library(file_path)
   response = nil
-  library["get_meaning"].each do |emo, trans|
+  emoticons[name][:japanese].each do |emo|
     if emo == emoticon
-      response = trans
+      response = emoticons[name]
     end
   end
   if response == nil
